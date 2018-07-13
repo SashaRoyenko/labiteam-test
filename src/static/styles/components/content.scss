@@ -1,0 +1,186 @@
+.content_s {
+  .content_s__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .chose {
+      width: 243px;
+      height: 827px;
+      border-radius: 5px;
+      background-color: #f5f5f2;
+      margin-right:20px;
+      @media (max-width: 780px){
+        display: none;
+      }
+      .chose__wrap {
+        margin-top: 15px;
+        margin-left: 10px;
+        form {
+          article {
+            margin-top: 27px;
+            &:first-child {
+              margin: 0;
+            }
+          }
+          h5 {
+            font-size: 14px;
+            font-family: 'Roboto Bold';
+            color: #252525;
+          }
+          input + label,span {
+            font-size: 13px;
+            font-family: 'Roboto Regular';
+            color: #444343;
+            cursor: pointer;
+          }
+          #freelancers+label>span{
+            margin-left: 16px;
+          }
+          label+span{
+            font-family: "Roboto Bold";
+            text-align: right;
+          }
+          .chose_budget,.chose_location,.chose_delivery,.chose_category{
+            h5{
+              margin-bottom: 10px;
+            }
+          }
+          .chose_subcategory, .client_rating {
+            input, label {
+              margin-top: 10px;
+              &:first-child {
+                margin-top: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .content_block {
+      display: flex;
+      flex-direction: column;
+      .content_block__wrap {
+        margin-top: 10px;
+        &:first-child {
+          margin-top: 50px;
+        }
+        max-width: 696px;
+        width: 100%;
+        @media (max-width: 780px){
+          max-width: 100%;
+        }
+        padding: 18px 25px 15px 19px;
+        height: fit-content;
+        border: 1px solid #f0f0ed;
+        border-radius: 5px;
+        h2 {
+          font-family: "Roboto Regular";
+          font-size: 16px;
+          color: #44ace9;
+          line-height: 30px;
+          margin-bottom: 7px;
+        }
+        .content_information, .content_category-skills, .content_client-rate {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin-left: 33px;
+          li {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            h6, p,.content_link--blue {
+              font-family: "Roboto Regular";
+              font-size: 13px;
+              color: #959595;
+            }
+            .content_link--blue {
+              color: #44ace9;
+            }
+            p {
+              margin-left: 4px;
+              color: #444343;
+            }
+          }
+        }
+        .content_text {
+          font-family: "Roboto Regular";
+          font-size: 12px;
+          color: #252525;
+          margin: 21px 0 10px 0;
+          line-height: 19px;
+        }
+        .content_category-skills {
+          li {
+            align-items: center;
+          }
+          .content_skills {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: baseline;
+            li {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              border-radius: 5px;
+              background-color: #f6f6f5;
+              padding: 12px;
+              margin-right: 10px;
+              font-family: "Roboto Regular";
+              font-size: 13px;
+              color: #444343;
+              text-align: center;
+              margin-left: 10px;
+            }
+          }
+        }
+        .content_information li, .content_category-skills > li:first-child {
+          position: relative;
+          margin-right: 12px;
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2px;
+            height: 11px;
+            background-color: #d0d0d0;
+            right: -6px;
+          }
+        }
+        .content_information {
+          margin-left: 0;
+          li:last-child::after {
+            display: none;
+          }
+        }
+        .content_client-rate {
+          .rating {
+            margin-left: 10px;
+            .rating_value {
+              font-family: "Roboto Bold";
+              color: #444343;
+              margin-right: 7px;
+            }
+            .rating_items__wrap {
+              display: flex;
+              flex-direction: row;
+              .rating-item {
+                width: 14px;
+                height: 13px;
+                transition: .3s;
+                cursor: pointer;
+                fill: #d2d2cd;
+              }
+              .active {
+                fill: #fecc1c;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
